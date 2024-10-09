@@ -1,8 +1,8 @@
 import { DefaultLayout, StudentLayout } from "../layout";
 import { RoleEnum, RouteConfig } from "../model/RouteConfig";
-import Student from "../pages/DashboardStudent";
 import Home from "../pages/Home";
 import Login from "../pages/Login/Login";
+import StudentDashboard from "../pages/Student/dashboard";
 
 const publicRoute: RouteConfig[] = [
   { path: "/", component: Home, layout: DefaultLayout, role: RoleEnum.Guest },
@@ -12,7 +12,7 @@ const publicRoute: RouteConfig[] = [
 const studentRoute: RouteConfig[] = [
   {
     path: "/dashboard-student",
-    component: Student,
+    component: StudentDashboard,
     layout: StudentLayout,
     role: RoleEnum.User,
   },
