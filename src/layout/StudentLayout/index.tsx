@@ -11,14 +11,17 @@ export const StudentLayout = ({
   children,
 }: StudentLayoutProps): JSX.Element => {
   return (
-    <div className="flex">
-      <StudentSidebar />
-      <div className="flex-1">
-        <Header />
-        <div className="p-5">{children}</div>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex flex-1">
+        <StudentSidebar />
+        <div className="flex-1">
+          <Header />
+          <div className="p-5">{children}</div>
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };
+
 export default StudentLayout;
