@@ -44,7 +44,7 @@ const StudentSidebar: React.FC = () => {
             label: "Subscription",
           },
           {
-            key: "setting",
+            key: "/setting",
             icon: <SettingOutlined />,
             label: "Setting",
           },

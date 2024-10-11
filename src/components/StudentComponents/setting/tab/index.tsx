@@ -8,7 +8,7 @@ interface SettingTabsProps {
   onTabChange: (key: string) => void;
 }
 
-const SubscriptionTabs: React.FC<SettingTabsProps> = ({
+const SettingTabs: React.FC<SettingTabsProps> = ({
   activeTab,
   onTabChange,
 }) => {
@@ -21,4 +21,4 @@ const SubscriptionTabs: React.FC<SettingTabsProps> = ({
   );
 };
 
-export default SubscriptionTabs;
+export default SettingTabs;
