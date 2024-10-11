@@ -6,8 +6,10 @@ import {
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const StudentSidebar: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -24,19 +26,20 @@ const StudentSidebar: React.FC = () => {
         theme="light"
         mode="inline"
         defaultSelectedKeys={["dashboard"]}
+        onClick={({ key }) => navigate(key)}
         items={[
           {
-            key: "dashboard",
+            key: "/dashboard-student",
             icon: <DashboardOutlined />,
             label: "Dashboard",
           },
           {
-            key: "order",
+            key: "/view-order",
             icon: <ShoppingCartOutlined />,
             label: "Order",
           },
           {
-            key: "subscription",
+            key: "/list-subscription",
             icon: <ProfileOutlined />,
             label: "Subscription",
           },
