@@ -1,9 +1,12 @@
 import { Button, Input, Layout, Space } from "antd";
+import { useNavigate } from "react-router-dom";
 import assets from "../../assets/assets";
+
 const { Header } = Layout;
 const { Search } = Input;
 
 export default function Home() {
+  const navigate = useNavigate();
   const onSearch = (value: string) => {
     console.log(value);
   };
@@ -35,9 +38,7 @@ export default function Home() {
             className="logo h-8 w-auto md:h-12 cursor-pointer"
             alt="Logo"
           />
-          <p className="subTitle text-lg md:text-2xl font-bold text-black ml-2">
-            FLearning
-          </p>
+          <p className="subTitle text-lg md:text-2xl font-bold text-black ml-2">FLearning</p>
         </div>
 
         {/* Search */}
@@ -58,13 +59,10 @@ export default function Home() {
 
         {/* Right */}
         <div className="right flex items-center justify-end flex-shrink-0 ml-auto mt-2 md:mt-0">
-          <Button
-            type="text"
-            className="register mr-3 md:mr-7 bg-transparent font-semibold cursor-pointer"
-          >
+          <Button onClick={() => navigate("/login")} type="text" className="register mr-3 md:mr-7 bg-transparent font-semibold cursor-pointer">
             Register
           </Button>
-          <Button className="login flex-shrink-0 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-white bg-gradient-to-br from-[#d01bc7] to-[#ff5117] text-sm md:text-lg font-semibold cursor-pointer transition-opacity duration-200">
+          <Button onClick={() => navigate("/login")} className="login flex-shrink-0 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-white bg-gradient-to-br from-[#d01bc7] to-[#ff5117] text-sm md:text-lg font-semibold cursor-pointer transition-opacity duration-200">
             Login
           </Button>
         </div>
